@@ -8,12 +8,8 @@
 
 int main(void)
 {
-	int len;
-	char *str = "Holberton";
-	int strc = 'c';
 
-	len = _printf("%c", strc);
+	_printf("%%");
 
-	// printf("%d", len);
 	return (0);
 }

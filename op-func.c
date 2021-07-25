@@ -33,14 +33,17 @@ int _printf_c(va_list c)
 }
 int _printf_d(va_list d)
 {
+	(void)d;
 	return (0);
 }
 int _printf_i(va_list i)
 {
+	(void)i;
 	return (0);
 }
 int _printf_per(va_list p)
 {
+	(void)p;
 	_putchar('%');
 	return (0);
 }

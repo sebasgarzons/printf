@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdlib.h>
 /**
  * _printf - asd
  * @format: asd
@@ -9,7 +9,6 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	va_start(ap, format);
 
 	funct_t types[] = {
 		{"s", _printf_s},
@@ -17,15 +16,20 @@ int _printf(const char *format, ...)
 		{"d", _printf_d},
 		{"i", _printf_i},
 		{"%", _printf_per}};
-	int i = 0, j = 0;
-	int ptchar = 0;
-	int fn = 0;
-	int rtn = 0;
+
+	int i = 0, j = 0, ptchar = 0, fn = 0, rtn = 0;
+
+	va_start(ap, format);
 
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == ' ' || format[i + 1] == '\0')
+			{
+				_printf("Error");
+				exit(1);
+			}
 			i++;
 			for (j = 0; j < 4; j++)
 			{
