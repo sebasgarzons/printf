@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * main - asd
@@ -7,6 +8,9 @@
 
 int main()
 {
-	_printf("Holbertonasdasdasdasdasdasdasdasdasd");
+	char *str = "Holberton";
+
+	_printf("%s %s", str, str);
+
 	return (0);
 }
