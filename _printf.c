@@ -15,8 +15,12 @@ int _printf(const char *format, ...)
 		{"s", _printf_s},
 		{"c", _printf_c},
 		{"d", _printf_d},
-		{"i", _printf_i}};
+		{"i", _printf_i},
+		{"%", _printf_per}};
 	int i = 0, j = 0;
+	int ptchar = 0;
+	int fn = 0;
+	int rtn = 0;
 
 	while (format[i])
 	{
@@ -26,15 +30,16 @@ int _printf(const char *format, ...)
 			for (j = 0; j < 4; j++)
 			{
 				if (format[i] == *(types[j].name))
-					types[j].f(ap);
+					fn += types[j].f(ap);
 			}
+			if (format[i + 1] == '\0' && format[i - 1] == *(types[j].name))
+				break;
+			i++;
 		}
+		ptchar += _putchar(format[i]);
 		i++;
 	}
-
-	// i++;
-
-	// _printf_s(ap);
-	// _printf_literal(format);
-	return (0);
+	rtn = fn + ptchar;
+	va_end(ap);
+	return (rtn);
 }

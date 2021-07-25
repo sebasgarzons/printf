@@ -22,11 +22,14 @@ int _printf_s(va_list s)
 {
 	char *str = va_arg(s, char *);
 	write(1, str, strlen(str));
-	return (0);
+	return (strlen(str));
 }
 int _printf_c(va_list c)
 {
-	return (0);
+	int cstr = va_arg(c, int);
+	write(1, &cstr, 1);
+
+	return (1);
 }
 int _printf_d(va_list d)
 {
@@ -34,5 +37,10 @@ int _printf_d(va_list d)
 }
 int _printf_i(va_list i)
 {
+	return (0);
+}
+int _printf_per(va_list p)
+{
+	_putchar('%');
 	return (0);
 }

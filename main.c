@@ -6,11 +6,14 @@
  * Return: Always 0
  */
 
-int main()
+int main(void)
 {
+	int len;
 	char *str = "Holberton";
+	int strc = 'c';
 
-	_printf("%s %s", str, str);
+	len = _printf("%c", strc);
 
+	// printf("%d", len);
 	return (0);
 }

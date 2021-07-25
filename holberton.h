@@ -21,6 +21,8 @@ int _printf_s(va_list);
 int _printf_c(va_list);
 int _printf_d(va_list);
 int _printf_i(va_list);
+int _printf_per(va_list);
 
 int _putchar(char c);
+int _strlen(char *s);
 #endif
