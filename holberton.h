@@ -41,5 +41,13 @@ typedef struct func
     int (*f)(va_list);
 } funct_t;
 
+static const funct_t types[] = {
+    {"s", _printf_s},
+    {"c", _printf_c},
+    {"d", _printf_d},
+    {"i", _printf_i},
+    {"%", _printf_per},
+    {"b", _printf_bin},
+    {"o", _printf_o}};
 
 #endif
