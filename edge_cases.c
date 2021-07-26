@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 int edge_cases(const char *format, va_list edge)
 {
