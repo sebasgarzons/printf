@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * edge_cases - evaluate edges cases
+ * @format: string in printf
+ * @edge: valist
+ * Return: Error -1 or 0
+ */
+
 int edge_cases(const char *format, va_list edge)
 {
 	int i;
