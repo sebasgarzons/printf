@@ -1,13 +1,20 @@
 #include "holberton.h"
 #include <stdio.h>
 
+/**
+ * _strrev - Function that reverse a string
+ * @str: A string
+ * Return: A value type char
+ */
+
 char *_strrev(char *str)
 {
 	int i;
 	int len = 0;
 	char c;
+
 	if (!str)
-		return NULL;
+		return (NULL);
 	while (str[len] != '\0')
 	{
 		len++;
@@ -18,12 +25,22 @@ char *_strrev(char *str)
 		str[i] = str[len - i - 1];
 		str[len - i - 1] = c;
 	}
-	return str;
+	return (str);
 }
+
+/**
+ * _itoa - Function that converts any value from int to string
+ * @i: Value entered type integer
+ * @strout: Standar Out
+ * @base: Base to convert values
+ * Return: A value type char
+ */
+
 char *_itoa(int i, char *strout, int base)
 {
 	char *str = strout;
 	int digit, sign = 0;
+
 	if (i < 0)
 	{
 		sign = 1;
@@ -42,5 +59,5 @@ char *_itoa(int i, char *strout, int base)
 	}
 	*str = '\0';
 	_strrev(strout);
-	return strout;
+	return (strout);
 }
