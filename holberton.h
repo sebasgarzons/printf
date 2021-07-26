@@ -4,12 +4,6 @@
 #include <stdarg.h> /*  Variadic Function   */
 #include <unistd.h> /*  Write() */
 
-/**
- * struct func - function structure
- * @name: character match with % in printf
- * @f: function match with % in printf
- */
-
 /*  PROTOTYPES  */
 
 /*  MAIN FUNCTION  */
@@ -34,19 +28,26 @@ char *_itoa(int i, char *strout, int base);
 char *_strncpy(char *dest, char *src, int n);
 
 /*  STRUCTURES  */
+
+/**
+ * struct func - function structure
+ * @name: character match with % in printf
+ * @f: function match with % in printf
+ */
+
 typedef struct func
 {
-    char *name;
-    int (*f)(va_list);
+	char *name;
+	int (*f)(va_list);
 } funct_t;
 
 static const funct_t types[] = {
-    {"s", _printf_s},
-    {"c", _printf_c},
-    {"d", _printf_d},
-    {"i", _printf_i},
-    {"%", _printf_per},
-    {"b", _printf_bin},
-    {"o", _printf_o}};
+	{"s", _printf_s},
+	{"c", _printf_c},
+	{"d", _printf_d},
+	{"i", _printf_i},
+	{"%", _printf_per},
+	{"b", _printf_bin},
+	{"o", _printf_o}};
 
 #endif
