@@ -9,8 +9,8 @@
 /*  STRUCTURES  */
 typedef struct func
 {
-    char *name;
-    int (*f)(va_list);
+	char *name;
+	int (*f)(va_list);
 } funct_t;
 
 int _printf(const char *format, ...);
@@ -21,6 +21,7 @@ int _printf_d(va_list);
 int _printf_i(va_list);
 int _printf_per(va_list);
 int _printf_bin(va_list);
+int _printf_o(va_list);
 
 int _putchar(char c);
 int _strlen(char *s);
