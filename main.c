@@ -24,6 +24,7 @@ int main(void)
 	// printf("Negative:[%d]\n", -762534);
 	// _printf("Unsigned octal:[%o]\n", ui);
 	// printf("Unsigned octal:[%o]\n", ui);
-	_printf("");
+	_printf("%%%\n");
+	printf("%%%\n");
 	return (0);
 }

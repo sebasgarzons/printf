@@ -34,5 +34,12 @@ int _strlen(char *s);
 char *_itoa(int i, char *strout, int base);
 char *_strncpy(char *dest, char *src, int n);
 
+/*  STRUCTURES  */
+typedef struct func
+{
+    char *name;
+    int (*f)(va_list);
+} funct_t;
+
 
 #endif
