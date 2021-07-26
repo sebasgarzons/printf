@@ -28,8 +28,6 @@ int _printf(const char *format, ...)
 			{
 				if (format[i] == *(types[j].name))
 					counter += types[j].f(ap);
-				else
-					return (-1);
 			}
 		}
 		else
