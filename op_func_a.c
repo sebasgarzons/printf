@@ -31,6 +31,5 @@ int _printf_o(va_list o)
 	_itoa(va_arg(o, unsigned int), buffer, 8);
 	length = write(1, buffer, _strlen(buffer));
 
-	printf("\n%s\n", buffer);
 	return (length);
 }

@@ -11,19 +11,13 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 
-	funct_t types[] = {
-		{"s", _printf_s},
-		{"c", _printf_c},
-		{"d", _printf_d},
-		{"i", _printf_i},
-		{"%", _printf_per},
-		{"b", _printf_bin},
-		{"o", _printf_o}};
-
-	int i, j;
+	int i, j, a;
 	int counter = 0;
 
 	va_start(ap, format);
+	a = edge_cases(format, ap);
+	if (a < 0)
+		return (-1);
 
 	for (i = 0; format[i]; i++)
 	{
@@ -39,6 +33,7 @@ int _printf(const char *format, ...)
 		else
 			counter += write(1, &format[i], 1);
 	}
+	printf("%d", *ap);
 	va_end(ap);
 	return (counter);
 }
