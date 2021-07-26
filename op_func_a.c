@@ -53,7 +53,7 @@ int _printf_x(va_list x)
 
 /**
  * _printf_u - function that prints unsigned decimal
- * @x: va_list
+ * @u: va_list
  * Return: length
  */
 
