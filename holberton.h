@@ -2,10 +2,9 @@
 #define HOLBERTON_H
 
 /*	PROTOTYPES	*/
-#include <stdarg.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
+#include <stdarg.h> /*  Variadic Function   */
+#include <unistd.h> /*  Write() */
+#include <stdlib.h> /*  Exit() */
 
 /*  STRUCTURES  */
 typedef struct func
@@ -15,14 +14,16 @@ typedef struct func
 } funct_t;
 
 int _printf(const char *format, ...);
-int _printf_literal(const char *format);
 
 int _printf_s(va_list);
 int _printf_c(va_list);
 int _printf_d(va_list);
 int _printf_i(va_list);
 int _printf_per(va_list);
+int _printf_bin(va_list);
 
 int _putchar(char c);
 int _strlen(char *s);
+char *_itoa(int i, char *strout, int base);
+char *_strncpy(char *dest, char *src, int n);
 #endif
