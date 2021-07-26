@@ -20,6 +20,8 @@ int _printf_i(va_list);
 int _printf_per(va_list);
 int _printf_bin(va_list);
 int _printf_o(va_list);
+int _printf_x(va_list);
+int _printf_u(va_list);
 
 /*  AUX FUNCTIONS */
 int _putchar(char c);
@@ -48,6 +50,8 @@ static const funct_t types[] = {
 	{"i", _printf_i},
 	{"%", _printf_per},
 	{"b", _printf_bin},
-	{"o", _printf_o}};
+	{"o", _printf_o},
+	{"x", _printf_x},
+	{"u", _printf_u}};
 
 #endif
