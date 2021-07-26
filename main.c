@@ -12,7 +12,6 @@ int main(void)
 {
 	int len;
 	int len2;
-
 	unsigned int ui;
 
 	ui = (unsigned int)INT_MAX + 1024;
@@ -25,7 +24,7 @@ int main(void)
 	printf("Negative:[%d]\n", -762534);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
+	_printf("%%%\n");
 	printf("%%%\n");
-
 	return (0);
 }
