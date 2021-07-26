@@ -3,7 +3,6 @@
 
 #include <stdarg.h> /*  Variadic Function   */
 #include <unistd.h> /*  Write() */
-#include <stdlib.h> /*  Exit() */
 
 /**
  * struct func - function structure
