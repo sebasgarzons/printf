@@ -22,6 +22,7 @@ int _printf_bin(va_list);
 int _printf_o(va_list);
 int _printf_x(va_list);
 int _printf_u(va_list);
+int _printf_R(va_list);
 
 /*  AUX FUNCTIONS */
 int _putchar(char c);
@@ -52,6 +53,7 @@ static const funct_t types[] = {
 	{"b", _printf_bin},
 	{"o", _printf_o},
 	{"x", _printf_x},
-	{"u", _printf_u}};
+	{"u", _printf_u},
+	{"R", _printf_R}};
 
 #endif

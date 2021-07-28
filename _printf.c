@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			for (j = 0; j < 9; j++)
+			for (j = 0; j < 10; j++)
 			{
 				if (format[i] == *(types[j].name))
 					counter += types[j].f(ap);

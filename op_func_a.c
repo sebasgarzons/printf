@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _printf_bin - function that prints a binary numer
@@ -67,4 +68,36 @@ int _printf_u(va_list u)
 	length = write(1, buffer, _strlen(buffer));
 
 	return (length);
+}
+
+/**
+ * _printf_R - function that prints ROT'13
+ * @R: va_list
+ * Return: length
+ */
+
+int _printf_R(va_list R)
+{
+	char *n = va_arg(R, char *);
+	char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, k;
+
+	if (n == NULL)
+		return (-1);
+
+	for (i = 0; n[i]; i++)
+	{
+		for (k = 0; input[k]; k++)
+		{
+			if (n[i] == input[k])
+			{
+				write(1, &output[k], 1);
+				break;
+			}
+		}
+		if (!input[i])
+			write(1, &n[i], 1);
+	}
+	return (_strlen(n));
 }
