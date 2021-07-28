@@ -23,12 +23,14 @@ int _printf_o(va_list);
 int _printf_x(va_list);
 int _printf_u(va_list);
 int _printf_R(va_list);
+int _printf_r(va_list);
 
 /*  AUX FUNCTIONS */
 int _putchar(char c);
 int _strlen(char *s);
 char *_itoa(int i, char *strout, int base);
 char *_strncpy(char *dest, char *src, int n);
+void _print_rev_recursion(char *s);
 
 /*  STRUCTURES  */
 
@@ -54,6 +56,7 @@ static const funct_t types[] = {
 	{"o", _printf_o},
 	{"x", _printf_x},
 	{"u", _printf_u},
-	{"R", _printf_R}};
+	{"R", _printf_R},
+	{"r", _printf_r}};
 
 #endif

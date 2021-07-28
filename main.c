@@ -8,7 +8,6 @@
  */
 int main(void)
 {
-
-	_printf("%d", 123);
+	_printf("%s", NULL);
 	return (0);
 }

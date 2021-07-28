@@ -88,7 +88,10 @@ int _printf_R(va_list R)
 	int i, k;
 
 	if (n == NULL)
-		return (-1);
+	{
+		_printf("(null)");
+		return (6);
+	}
 
 	for (i = 0; n[i]; i++)
 	{
