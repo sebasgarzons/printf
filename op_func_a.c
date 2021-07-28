@@ -88,7 +88,7 @@ int _printf_R(va_list R)
 	int i, k;
 
 	if (n == NULL)
-		n = "(ahyy)";
+		return ("(ahyy)");
 
 	for (i = 0; n[i]; i++)
 	{
