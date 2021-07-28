@@ -1,30 +1,22 @@
 #include "holberton.h"
 
-/**
- * _strrev - Function that reverse a string
- * @str: A string
- * Return: A value type char
- */
-
-char *_strrev(char *str)
+// Function to swap two numbers
+void swap(char *x, char *y)
 {
-	int i;
-	int len = 0;
-	char c;
+	char t = *x;
+	*x = *y;
+	*y = t;
+}
 
-	if (!str)
-		return (NULL);
-	while (str[len] != '\0')
+// Function to reverse `buffer[i…j]`
+char *reverse(char *buffer, int i, int j)
+{
+	while (i < j)
 	{
-		len++;
+		swap(&buffer[i++], &buffer[j--]);
 	}
-	for (i = 0; i < (len / 2); i++)
-	{
-		c = str[i];
-		str[i] = str[len - i - 1];
-		str[len - i - 1] = c;
-	}
-	return (str);
+
+	return buffer;
 }
 
 /**
@@ -35,28 +27,47 @@ char *_strrev(char *str)
  * Return: A value type char
  */
 
-char *_itoa(int i, char *strout, int base)
+char *_itoa(int value, char *buffer, int base)
 {
-	char *str = strout;
-	int digit, sign = 0;
+	int i = 0, n = 0;
+	// invalid input
+	if (base < 2 || base > 32)
+	{
+		return buffer;
+	}
+	n = _abs(value);
+	while (n)
+	{
+		int r = n % base;
 
-	if (i < 0)
-	{
-		sign = 1;
-		i *= -1;
+		if (r >= 10)
+		{
+			buffer[i++] = 65 + (r - 10);
+		}
+		else
+		{
+			buffer[i++] = 48 + r;
+		}
+
+		n = n / base;
 	}
-	while (i)
+
+	// if the number is 0
+	if (i == 0)
 	{
-		digit = i % base;
-		*str = (digit > 9) ? ('A' + digit - 10) : '0' + digit;
-		i = i / base;
-		str++;
+		buffer[i++] = '0';
 	}
-	if (sign)
+
+	// If the base is 10 and the value is negative, the resulting string
+	// is preceded with a minus sign (-)
+	// With any other base, value is always considered unsigned
+	if (value < 0 && base == 10)
 	{
-		*str++ = '-';
+		buffer[i++] = '-';
 	}
-	*str = '\0';
-	_strrev(strout);
-	return (strout);
+
+	buffer[i] = '\0'; // null terminate string
+
+	// reverse the string and return it
+	return reverse(buffer, 0, i - 1);
 }

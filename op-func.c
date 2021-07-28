@@ -50,13 +50,26 @@ int _printf_c(va_list c)
 
 int _printf_d(va_list d)
 {
-	int length;
+	int length = 0;
+	int num = va_arg(d, int);
+	int firsts_num;
+	int last_num;
 	char buffer[1024];
-
-	_itoa(va_arg(d, int), buffer, 10);
-
-	length = write(1, buffer, _strlen(buffer));
-
+	char buffer_ln[1];
+	if (num < -9 || num > 9)
+	{
+		firsts_num = num / 10;
+		last_num = _abs(num % 10);
+		_itoa(firsts_num, buffer, 10);
+		_itoa(last_num, buffer_ln, 10);
+		length = write(1, buffer, _strlen(buffer));
+		length += write(1, buffer_ln, _strlen(buffer_ln));
+	}
+	else
+	{
+		_itoa(num, buffer, 10);
+		length = write(1, buffer, _strlen(buffer));
+	}
 	return (length);
 }
 
@@ -69,11 +82,7 @@ int _printf_d(va_list d)
 int _printf_i(va_list i)
 {
 	int length;
-	char buffer[1024];
-
-	_itoa(va_arg(i, int), buffer, 10);
-	length = write(1, buffer, _strlen(buffer));
-
+	length = _printf_d(i);
 	return (length);
 }
 
