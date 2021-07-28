@@ -31,7 +31,6 @@ int _strlen(char *s);
 char *_itoa(int i, char *strout, int base);
 char *_strncpy(char *dest, char *src, int n);
 void _print_rev_recursion(char *s);
-int _abs(int n);
 
 /*  STRUCTURES  */
 

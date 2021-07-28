@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _printf_bin - function that prints a binary numer
@@ -27,12 +28,13 @@ int _printf_bin(va_list s)
 
 int _printf_o(va_list o)
 {
-	int length;
+	unsigned int length;
 
 	char buffer[1024];
 
-	_itoa(va_arg(o, long), buffer, 8);
+	_itoa(va_arg(o, unsigned int), buffer, 8);
 	length = write(1, buffer, _strlen(buffer));
+
 	return (length);
 }
 
