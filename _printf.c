@@ -23,12 +23,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			for (; format[i + 1] != '%' && format[i + 1] != '\0'; i++)
-				counter += write(1, &format[i], 1);
-		}
-
-		if (format[i] == '%')
-		{
 			i++;
 			for (j = 0; j < 11; j++)
 			{
@@ -39,7 +33,6 @@ int _printf(const char *format, ...)
 		else
 			counter += write(1, &format[i], 1);
 	}
-
 	va_end(ap);
 	return (counter);
 }
