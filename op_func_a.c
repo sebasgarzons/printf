@@ -9,9 +9,13 @@
 
 int _printf_bin(va_list s)
 {
+	int size;
 	char *str = va_arg(s, char *);
 
-	int size = write(1, str, _strlen(str));
+	if (str == NULL)
+		return (-1);
+
+	size = write(1, str, _strlen(str));
 
 	return (size);
 }
@@ -82,6 +86,9 @@ int _printf_R(va_list R)
 	char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, k;
+
+	if (n == NULL)
+		return (-1);
 
 	for (i = 0; n[i]; i++)
 	{

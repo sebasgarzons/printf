@@ -8,9 +8,15 @@
 
 int _printf_s(va_list s)
 {
-	char *str = va_arg(s, char *);
+	int size;
+	char *str;
 
-	int size = write(1, str, _strlen(str));
+	str = va_arg(s, char *);
+
+	if (str == NULL)
+		return (-1);
+
+	size = write(1, str, _strlen(str));
 
 	return (size);
 }
@@ -24,6 +30,9 @@ int _printf_s(va_list s)
 int _printf_c(va_list c)
 {
 	int cstr = va_arg(c, int);
+
+	if (c == NULL)
+		return (-1);
 
 	write(1, &cstr, 1);
 
@@ -42,6 +51,7 @@ int _printf_d(va_list d)
 	char buffer[1024];
 
 	_itoa(va_arg(d, int), buffer, 10);
+
 	length = write(1, buffer, _strlen(buffer));
 
 	return (length);

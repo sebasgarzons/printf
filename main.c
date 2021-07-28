@@ -8,9 +8,7 @@
  */
 int main(void)
 {
-	char *str = "HELLO";
 
-	int a = _printf("%R\n", str);
-	_printf("%d", a);
-	return(0);
+	_printf("%d", 123);
+	return (0);
 }
