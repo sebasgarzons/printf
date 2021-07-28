@@ -83,9 +83,6 @@ int _printf_R(va_list R)
 	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, k;
 
-	if (n == NULL)
-		return (-1);
-
 	for (i = 0; n[i]; i++)
 	{
 		for (k = 0; input[k]; k++)

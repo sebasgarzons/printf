@@ -26,7 +26,7 @@ int edge_cases(const char *format, va_list edge)
 			{
 				return (-1);
 			}
-			for (j = 0; j < 7; j++)
+			for (j = 0; j < 10; j++)
 			{
 				if (format[i] == *(types[j].name))
 					banderita++;
