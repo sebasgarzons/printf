@@ -16,11 +16,17 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 	a = edge_cases(format, ap);
-	if (a < 0)
-		return (-1);
+	if (a != 0)
+		return (a);
 
 	for (i = 0; format[i]; i++)
 	{
+		if (format[i] == '%')
+		{
+			for (; format[i + 1] != '%' && format[i + 1] != '\0'; i++)
+				counter += write(1, &format[i], 1);
+		}
+
 		if (format[i] == '%')
 		{
 			i++;
@@ -33,6 +39,7 @@ int _printf(const char *format, ...)
 		else
 			counter += write(1, &format[i], 1);
 	}
+
 	va_end(ap);
 	return (counter);
 }

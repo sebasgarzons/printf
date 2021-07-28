@@ -18,6 +18,9 @@ int edge_cases(const char *format, va_list edge)
 
 	for (i = 0; format[i]; i++)
 	{
+		if (format[i] == '%' && format[i + 1] != '%')
+			return (0);
+
 		if (format[i] == '%')
 		{
 			banderita_per++;
@@ -35,6 +38,8 @@ int edge_cases(const char *format, va_list edge)
 			{
 				return (-1);
 			}
+			else
+				return (0);
 		}
 	}
 
