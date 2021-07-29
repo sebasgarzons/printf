@@ -7,12 +7,13 @@ _printf(3) \- formatted output conversion
 
 int edge_cases(const char *format, va_list);
 .SH DESCRIPTION
-The functions in the _printf() family produce output according to a format that write output to stdout
 
 The function write the output under the control of a format string that specifies how subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.
 .SH Format of the format string
+
 The format string is a character string, beginning and ending in its initial shift state, if any.  The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments.  Each conversion specification is introduced by the character %, and ends with a conversion specifier.  In between there may be (in this order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier.
 .SH Flag characters
+
 .SH Conversion specifiers
 d, i    The int argument is converted to signed decimal notation.
         The precision, if any, gives the minimum number of digits
@@ -41,14 +42,15 @@ Upon successful return, these functions return the number of
 characters printed (excluding the null byte used to end output to
 strings).
 .SH BUGS
+
 .SH Conversion specifiers
 d, i    This identifier print numbers fine but works with some bugs
 
 R       This identifier decode string in ROT'13 fine but works with some bugs
 
 .SH AUTHORS
-- Sebastian Garzon (@Ele5438 on Twitter or Ele4327 on GitHub)
-
 - Laura Cadavid (@CanelitaCadavid on Twitter or LauraAlejandra2021 on GitHub)
+
+- Sebastian Garzon (@Ele5438 on Twitter or Ele4327 on GitHub)
 
 - Cristian Granada (@Crisgrvc on Twitter or Crisgrva on GitHub)
