@@ -16,170 +16,109 @@ Features
 - All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 - There is not allowed global variables
 - No more than 5 functions per file
-- Our work is still in development:
-
-<style>
-.title_fnctns{
-margin: 0px;
-padding: 0px;
-margin-top: -12px;
-padding-top: -12px;
-}
-</style>
+- The prototypes of all your functions should be included in your header file called holberton.h
+- Your code should use the Betty style. For more info: [Betty](https://github.com/holbertonschool/Betty)
+- ___Our work is still in development:___
 <h3 class="title_fnctns">
 Functions:
 </h3>
-
-- [ ] Type char (%c)
-- [ ] Type string (%s)
-- [ ] Type percent (%%)
-- [ ] Type decimal, base 10 (%d)
-- [ ] Type integer, base 10 (%i)
-- [ ] Type binary (%b)
-- [ ] Type unsigned decimal, base 10 (%u)
-- [ ] Type octal (%o)
-- [ ] Type hexadecimal, base 16 (%x)
-- [ ] Type reverse string (%r)
-- [ ] Type Rot13 (%R)
-
-|  |   |
-| ------------ | ------------ |
-|   |   |
-|   |   |
+- [x] Type char
+- [x] Type string
+- [x] Type percent
+- [x] Type decimal, base 10
+- [x] Type integer, base 10
+- [ ] Type binary
+- [x] Type unsigned decimal, base 10
+- [ ] Type octal
+- [x] Type hexadecimal, base 16
+- [x] Type reverse string
+- [ ] Type Rot13
 
 
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-
-
-
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-
-
-**Table of Contents**
+_________
 
 [TOCM]
+#Compilation and Execution
+Para poder correr el programa es tan sencillo como compilarlo en la terminal con las siguientes banderas: 
+> gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
-[TOC]
+If you wish, you can optimize this process by creating an alias in the terminal to summarize all the flags and steps in a single command (Note, in the following command you are also running the compiled program, and also proceed to delete the executable to leave the folder as clean as possible).
 
-#Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-##Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-###Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-####Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
-#####Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-######Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+> alias cplpf="gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf ; ./printf ; rm ./printf"
 
+#How this work:
 
+####Main Function
+> int _printf(const char *format, ...);
 
-###Characters
+### Subfunctions
+They are those that print to the standard output, according to the format specified in the % parameter.
+
+So, for example: if the parameter is %c, then the program will look for the function "printf_c" and print a character.
+```
+int main (void)
+{
+	_printf("Character: [%c]\n", 'H')
+}
+```
+The output will be:
+>Character:[H]
+
+And if the parameter is %s, then the program will look for the function "printf_s" and print a string.
+```
+int main (void)
+{
+	char *str = "I am a string !";
+	_printf("String:[%s]\n", str);
+}
+```
+
+The output will be:
+>String:[I am a string !]
+
+####Correspondence table
+
+| Function  | Symbol  | Description |
+| :------ |:---------------:| -----:|
+| `printf_s`      | %s | Prints a string |
+| `printf_c`      | %c  |   Prints a character |
+| `printf_d`   | %d   |   Prints in decimal format |
+| `printf_i`      |%i  |   Prints a integer |
+| `printf_per`      | %per |   Prints in percentage format |
+| `printf_bin`     | %bin |   Prints in binary type |
+| `printf_o`      | %o |   Prints in octal type |
+| `printf_x`      | %x |   Prints in hexadecimal format |
+| `printf_u`     | %u |   Prints in unsigned decimal format |
+| `printf_R`     | %R |   Prints in ROT13 format |
+| `printf_r`     | %r |   Prints a string in reverse |
                 
 ----
 
-~~Strikethrough~~ <s>Strikethrough (when enable html tag decode.)</s>
-*Italic*      _Italic_
-**Emphasis**  __Emphasis__
-***Emphasis Italic*** ___Emphasis Italic___
+### Aux Functions:
 
-Superscript: X<sub>2</sub>，Subscript: O<sup>2</sup>
+#####int _putchar(char c);
+#####int _strlen(char *s);
+#####char *_itoa(int i, char *strout, int base);
+#####void _print_rev_recursion(char *s);
 
-**Abbreviation(link HTML abbr tag)**
+### Edge Cases
 
-The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
 
-###Blockquotes
 
-> Blockquotes
 
-Paragraphs and Line Breaks
-                    
-> "Blockquotes Blockquotes", [Link](http://localhost/)。
 
-###Links
 
-[Links](http://localhost/)
 
-[Links with title](http://localhost/ "link title")
 
-`<link>` : <https://github.com>
 
-[Reference link][id/name] 
-
-[id/name]: http://link-url/
-
-GFM a-tail link @pandao
-
-###Code Blocks (multi-language) & highlighting
-
-####Inline code
 
 `$ npm install marked`
 
-####Code Blocks (Indented style)
-
-Indented 4 spaces, like `<pre>` (Preformatted Text).
-
-    <?php
-        echo "Hello world!";
-    ?>
-    
-Code Blocks (Preformatted text):
-
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
-
-####Javascript　
-
-```javascript
-function test(){
-	console.log("Hello world!");
-}
- 
-(function(){
-    var box = function(){
-        return box.fn.init();
-    };
-
-    box.prototype = box.fn = {
-        init : function(){
-            console.log('box.init()');
-
-			return this;
-        },
-
-		add : function(str){
-			alert("add", str);
-
-			return this;
-		},
-
-		remove : function(str){
-			alert("remove", str);
-
-			return this;
-		}
-    };
-    
-    box.fn.init.prototype = box.fn;
-    
-    window.box =box;
-})();
-
-var testBox = box();
-testBox.add("jQuery").remove("jQuery");
-```
 
 
 
-###Images
 
+###FlowChart
 Image:
 
 ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
@@ -198,71 +137,5 @@ Image:
                 
 ----
 
-###Lists
-
-####Unordered list (-)
-
-- Item A
-- Item B
-- Item C
-     
-####Unordered list (*)
-
-* Item A
-* Item B
-* Item C
-
-####Unordered list (plus sign and nested)
-                
-+ Item A
-+ Item B
-    + Item B 1
-    + Item B 2
-    + Item B 3
-+ Item C
-    * Item C 1
-    * Item C 2
-    * Item C 3
-
-####Ordered list
-                
-1. Item A
-2. Item B
-3. Item C
-                
-----
-                    
-###Tables
-
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
-                
-----
-
-
-
-
-###FlowChart
-
-```flow
-st=>start: Login
-op=>operation: Login operation
-cond=>condition: Successful Yes or No?
-e=>end: To admin
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
 
 ###End
