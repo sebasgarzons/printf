@@ -8,9 +8,7 @@ For those who do not know, the printf function is the function used in C and oth
 
 For a more specific explanation, we invite you to see our manual: PrintF
 
-<h2>
-Features
-</h2>
+## Features
 
 - Developed in  WSL  20.04 LTS
 - All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -19,24 +17,23 @@ Features
 - The prototypes of all your functions should be included in your header file called holberton.h
 - Your code should use the Betty style. For more info: [Betty](https://github.com/holbertonschool/Betty)
 - ___Our work is still in development:___
-<h3 class="title_fnctns">
-Functions:
-</h3>
-- [ ] Type char
-- [ ] Type string
-- [ ] Type percent
-- [ ] Type decimal, base 10
-- [ ] Type integer, base 10
-- [ ] Type binary
-- [ ] Type unsigned decimal, base 10
-- [ ] Type octal
-- [ ] Type he adecimal, base 16
-- [ ] Type reverse string
-- [ ] Type Rot13
+
+## Functions:
+
+- [ ] Type char (%c)
+- [ ] Type string (%s)
+- [ ] Type percent (%%)
+- [ ] Type decimal, base 10 (%d)
+- [ ] Type integer, base 10 (%i)
+- [ ] Type binary (%b)
+- [ ] Type unsigned decimal, base 10 (%u)
+- [ ] Type octal (%o)
+- [ ] Type hexadecimal, base 16 (%x)
+- [ ] Type reverse string (%r)
+- [ ] Type Rot13 (%R)
 
 
-[TOCM]
-#Compilation and Execution
+## Compilation and Execution
 Para poder correr el programa es tan sencillo como compilarlo en la terminal con las siguientes banderas: 
 > gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
@@ -44,9 +41,9 @@ If you wish, you can optimize this process by creating an alias in the terminal 
 
 > alias cplpf="gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf ; ./printf ; rm ./printf"
 
-#How this work:
+## How this work:
 
-####Main Function
+### Main Function
 > int _printf(const char *format, ...);
 
 ### Subfunctions
@@ -77,7 +74,7 @@ The output will be:
 ####Correspondence table
 
 | Function  | Symbol  | Description |
-| :------ |:---------------:| -----:|
+| :------ |:--------------:| ---------------------:|
 | `printf_s`      | %s | Prints a string |
 | `printf_c`      | %c  |   Prints a character |
 | `printf_d`   | %d   |   Prints in decimal format |
