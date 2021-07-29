@@ -16,8 +16,8 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 	a = edge_cases(format, ap);
-	if (a < 0)
-		return (-1);
+	if (a != 0)
+		return (a);
 
 	for (i = 0; format[i]; i++)
 	{
