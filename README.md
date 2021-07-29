@@ -1,4 +1,4 @@
-![](https://github.com/Ele4327/printf/blob/img/Header.png)
+![](https://github.com/Ele4327/printf/blob/main/img/Header.png)
 
 👋 Hello Devs
 # PrintF
@@ -128,7 +128,7 @@ These conditions are usually abnormal, e.g. typing errors or grouping errors, bu
 ### FlowChart
 Image:
 
-![](https://github.com/Ele4327/printf/blob/img/flow_chart.png)
+![](https://github.com/Ele4327/printf/blob/main/img/flow_chart.png)
                 
 ----
 
