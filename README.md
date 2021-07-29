@@ -20,21 +20,21 @@ For a more specific explanation, we invite you to see our manual: PrintF
 
 ## Functions:
 
-- [ ] Type char (%c)
-- [ ] Type string (%s)
-- [ ] Type percent (%%)
-- [ ] Type decimal, base 10 (%d)
-- [ ] Type integer, base 10 (%i)
-- [ ] Type binary (%b)
-- [ ] Type unsigned decimal, base 10 (%u)
-- [ ] Type octal (%o)
-- [ ] Type hexadecimal, base 16 (%x)
-- [ ] Type reverse string (%r)
-- [ ] Type Rot13 (%R)
+- [ ] Type char
+- [ ] Type string
+- [ ] Type percent
+- [ ] Type decimal, base 10
+- [ ] Type integer, base 10
+- [ ] Type binary
+- [ ] Type unsigned decimal, base 10
+- [ ] Type octal
+- [ ] Type hexadecimal, base 16
+- [ ] Type reverse string
+- [ ] Type Rot13
 
 
 ## Compilation and Execution
-Para poder correr el programa es tan sencillo como compilarlo en la terminal con las siguientes banderas: 
+To run the program it is as simple as compiling it in the terminal with the following flags: 
 > gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
 If you wish, you can optimize this process by creating an alias in the terminal to summarize all the flags and steps in a single command (Note, in the following command you are also running the compiled program, and also proceed to delete the executable to leave the folder as clean as possible).
@@ -48,6 +48,7 @@ If you wish, you can optimize this process by creating an alias in the terminal 
 
 ### Subfunctions
 They are those that print to the standard output, according to the format specified in the % parameter.
+All of these are stored in 'op-func' files.
 
 So, for example: if the parameter is %c, then the program will look for the function "printf_c" and print a character.
 ```
@@ -71,7 +72,7 @@ int main (void)
 The output will be:
 >String:[I am a string !]
 
-####Correspondence table
+#### Correspondence table
 
 | Function  | Symbol  | Description |
 | :------ |:--------------:| ---------------------:|
@@ -90,13 +91,25 @@ The output will be:
 ----
 
 ### Aux Functions:
-
-#####int _putchar(char c);
-#####int _strlen(char *s);
-#####char *_itoa(int i, char *strout, int base);
-#####void _print_rev_recursion(char *s);
+They are those that allow the sub-functions to have an adequate behavior according to their needs.
+##### Putchar:
+Write a digit, using the write function (<unistd.h>).
+> int _putchar(char c);
+##### Strlen:
+Measures the length of a string
+> int _strlen(char *s);
+##### Itoa:
+Convert integers to strings
+> char *_itoa(int i, char *strout, int base);
+##### Print-Rev-Recursion:
+Prints a string in reverse
+> void _print_rev_recursion(char *s);
 
 ### Edge Cases
+
+These are situations in which the code obtains unexpected results under certain specific conditions.
+These conditions are usually abnormal, e.g. typing errors or grouping errors, but they must still be taken into account.
+
 
 
 
@@ -113,7 +126,7 @@ The output will be:
 
 
 
-###FlowChart
+### FlowChart
 Image:
 
 ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
@@ -132,5 +145,20 @@ Image:
                 
 ----
 
+<h3 align="left">Contribuitors</h3>
+<p align="left">
+<a href="https://twitter.com/@crisgrvc" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@crisgrvc" height="30" width="40" />Cristian Granada</a>
+</p>
+<p align="left">
+<a href="https://twitter.com/@CanelitaCadavid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@crisgrvc" height="30" width="40" />Laura Alejandra Cadavid</a>
+</p>
+<p align="left">
+<a href="https://twitter.com/@ele5438" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@crisgrvc" height="30" width="40" />Sebastian Garzón</a>
+</p>
 
-###End
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> </p>
+
+
+### Thanks for your attention, feel free to contribute to the project or contact us if you need something
+### End
