@@ -1,3 +1,5 @@
+![](https://github.com/Ele4327/printf/img/Header.png)
+
 👋 Hello Devs
 # PrintF
 
@@ -110,38 +112,23 @@ Prints a string in reverse
 These are situations in which the code obtains unexpected results under certain specific conditions.
 These conditions are usually abnormal, e.g. typing errors or grouping errors, but they must still be taken into account.
 
-
-
-
-
-
-
-
-
-
-
-`$ npm install marked`
-
-
-
-
+```
+    _printf("1 -> %");
+    _printf("\n");
+    _printf("2 -> %\n");
+    _printf("3 -> %%%\n");
+    _printf("4 -> %%%%\n");
+    _printf("5 -> %% %%\n");
+    _printf("\n");
+    _printf("6 -> %%%z\n");
+    _printf("7 -> %% %z\n");
+    _printf("8 -> %%%s\n", "HELLO");
+```
 
 ### FlowChart
 Image:
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
-
-> Follow your heart.
-
-![](https://pandao.github.io/editor.md/examples/images/8.jpg)
-
-> 图为：厦门白城沙滩 Xiamen
-
-图片加链接 (Image + Link)：
-
-[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/examples/images/7.jpg "李健首张专辑《似水流年》封面")
-
-> 图为：李健首张专辑《似水流年》封面
+![](https://github.com/Ele4327/printf/img/flow_chart.png)
                 
 ----
 
@@ -160,5 +147,5 @@ Image:
 <p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> </p>
 
 
-### Thanks for your attention, feel free to contribute to the project or contact us if you need something
+##### Thanks for your attention, feel free to contribute to the project or contact us if you need something
 ### End
