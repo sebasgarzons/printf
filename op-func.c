@@ -34,9 +34,6 @@ int _printf_c(va_list c)
 {
 	int cstr = va_arg(c, int);
 
-	if (c == NULL)
-		return (-1);
-
 	write(1, &cstr, 1);
 
 	return (1);
@@ -84,7 +81,9 @@ int _printf_i(va_list i)
  */
 int _printf_per(va_list p)
 {
-	_putchar('%');
+	char per = '%';
+
+	write(1, &per, 1);
 	(void)p;
 	return (1);
 }

@@ -9,35 +9,32 @@
 
 int edge_cases(const char *format, va_list edge)
 {
-	int i, j;
-	int banderita = 0;
-	int banderita_per = 0;
+	int k = 0;
+	int i = 0;
 
 	if (format == NULL)
 		return (-1);
 
-	for (i = 0; format[i]; i++)
+	for (i = 0; format[i]; i += 2)
 	{
 		if (format[i] == '%')
 		{
-			banderita_per++;
-			i++;
-			if (format[i] == '%' && format[i + 1] == '%' && format[i + 2] != '%')
+			for (k = 0; types[k].name; k++)
 			{
-				return (-1);
-			}
-			for (j = 0; j < 11; j++)
-			{
-				if (format[i] == *(types[j].name))
-					banderita++;
-			}
-			if (banderita != banderita_per)
-			{
-				return (-1);
+				if (format[i] == '%' && format[i + 1] == *(types[k].name))
+				{
+					break;
+				}
 			}
 		}
+		if ((format[i] == '%' && format[i + 1] == ' ') ||
+			(format[i] == '%' && format[i + 1] == '\0'))
+		{
+			return (-1);
+		}
+		else
+			break;
 	}
-
 	(void)edge;
 	(void)format;
 	return (0);

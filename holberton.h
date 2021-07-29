@@ -3,6 +3,7 @@
 
 #include <stdarg.h> /*  Variadic Function   */
 #include <unistd.h> /*  Write() */
+#include <stdio.h>
 
 /*  PROTOTYPES  */
 
@@ -57,6 +58,7 @@ static const funct_t types[] = {
 	{"x", _printf_x},
 	{"u", _printf_u},
 	{"R", _printf_R},
-	{"r", _printf_r}};
+	{"r", _printf_r},
+	{NULL, NULL}};
 
 #endif
