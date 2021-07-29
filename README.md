@@ -22,16 +22,16 @@ Features
 <h3 class="title_fnctns">
 Functions:
 </h3>
-- [x] Type char
-- [x] Type string
-- [x] Type percent
-- [x] Type decimal, base 10
-- [x] Type integer, base 10
+- [ ] Type char
+- [ ] Type string
+- [ ] Type percent
+- [ ] Type decimal, base 10
+- [ ] Type integer, base 10
 - [ ] Type binary
-- [x] Type unsigned decimal, base 10
+- [ ] Type unsigned decimal, base 10
 - [ ] Type octal
-- [x] Type hexadecimal, base 16
-- [x] Type reverse string
+- [ ] Type he adecimal, base 16
+- [ ] Type reverse string
 - [ ] Type Rot13
 
 
