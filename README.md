@@ -35,8 +35,6 @@ Functions:
 - [ ] Type Rot13
 
 
-_________
-
 [TOCM]
 #Compilation and Execution
 Para poder correr el programa es tan sencillo como compilarlo en la terminal con las siguientes banderas: 
