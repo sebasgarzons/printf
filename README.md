@@ -47,7 +47,8 @@ If you wish, you can optimize this process by creating an alias in the terminal 
 
 First of all, if you want and need a Manual, to look at the specific commands, how they work, their flags, accepted parameters, qualities, and everything else you need, of course we have our own man _printf!
 
-Just type in the console > man ./man_3_printf
+Just type in the console:
+> man ./man_3_printf
 
 ### Main Function
 > int _printf(const char *format, ...);
